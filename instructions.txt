@@ -1,0 +1,58 @@
+QUIZ 4
+
+
+Create project Quiz4People.
+
+
+interface Printable {
+public print(); // display ALL fields of this class
+}
+
+abstract class Person implements Printable, Comparable<Person> {
+String name; // 2 or more characters
+int age; // 0-150
+Comparator<Person> compareByAge = new ... // TODO
+}
+
+class Student extends Person {
+String program; // 2 or more characters
+BigDecimal gpa; // from 0 to 4.0
+@Override
+public print() {...} // display ALL fields of this class
+}
+
+class Teacher extends Person {
+String subject; // 2 or more characters
+int yearsOfExperience;
+@Override
+public print() {...} // display ALL fields of this class
+}
+
+input.txt contents:
+
+Student;Jerry;23;PhysEd;3.1
+Student;Maria;44;Nursing;3.7
+Student;;;;;
+Admin;Jeremy;23
+Teacher;Tim;55;Mathematics;29
+
+Teacher;Larry;29;Advising;2
+Student;;21
+Teacher;Miriam;here;Nursing;34
+
+
+Your task is to read in data from input.txt and instantiate appropraite classes either Teacher or Student with the correct data.
+Parsing the file must be done line by line.
+If a line is invalid (too may/too few data items, invalid data, etc.) you must display a warning and continue parsing to the next line.
+Add every created object of Teacher or Student to an ArrayList<Person>.
+
+You need to add constructors, getters and possibly setters (not required, since no values are changed ever).
+Constructors and setters must throw a custom InvalidDataException exception if data is invalid.
+
+Operations of main() method:
+1. Read in the file and add items to the list
+2. Loop over the list and using Printable interface print each item's data.
+3. Sort the list using Comparable by name
+4. Loop over the list and using Printable interface print each item's data.
+5. Sort the list using Comparator by age
+6. Loop over the list and using Printable interface print each item's data.

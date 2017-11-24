@@ -1,0 +1,9 @@
+Student;Jerry;66;PhysEd;3.1
+Student;Maria;44;Nursing;3.7
+Student;;;;;
+Admin;Jeremy;23
+Teacher;Tim;55;Mathematics;29
+
+Teacher;Larry;29;Advising;2
+Student;;21
+Teacher;Miriam;here;Nursing;34
